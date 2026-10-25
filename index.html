@@ -10,8 +10,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Manrope:wght@500;700;800&display=swap" rel="stylesheet">
 <script>try{var t=localStorage.getItem('ichz-theme')||(matchMedia('(prefers-color-scheme:dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){document.documentElement.dataset.theme='light'}</script>
 <style>
-:root{--bg:#F5F8FD;--surface:#fff;--ink:#0B1F3A;--muted:#52627A;--brand:#1D5FB8;--on-brand:#fff;--line:#DCE5F1;--soft:#E8F0FB;--glow:#1d5fb82e}
-:root[data-theme=dark]{--bg:#08121F;--surface:#0F1D31;--ink:#EAF1FB;--muted:#9FB0C6;--brand:#4F95F0;--on-brand:#06101C;--line:#1E3250;--soft:#12263f;--glow:#4f95f038}
+:root{--glass:#ffffff8c;--gb:#ffffffb8;--b1:#1d5fb85c;--b2:#38bdf84d;--b3:#6366f13d;--bg:#F5F8FD;--surface:#fff;--ink:#0B1F3A;--muted:#52627A;--brand:#1D5FB8;--on-brand:#fff;--line:#DCE5F1;--soft:#E8F0FB;--glow:#1d5fb82e}
+:root[data-theme=dark]{--glass:#0f1d3199;--gb:#78aaff2e;--b1:#1d5fb875;--b2:#0ea5e93d;--b3:#4f46e53d;--bg:#08121F;--surface:#0F1D31;--ink:#EAF1FB;--muted:#9FB0C6;--brand:#4F95F0;--on-brand:#06101C;--line:#1E3250;--soft:#12263f;--glow:#4f95f038}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Manrope,"Hind Siliguri",system-ui,sans-serif;text-align:left}
 html[lang=bn] body{font-family:"Hind Siliguri",Manrope,system-ui,sans-serif}
@@ -71,6 +71,12 @@ footer{border-top:1px solid var(--line);padding:22px 0 90px;color:var(--muted);f
 .fab svg{width:28px;height:28px}
 @media(max-width:800px){.g3{grid-template-columns:1fr 1fr}.hero{grid-template-columns:1fr;padding-top:32px;gap:24px}.art{max-width:300px;order:-1}.grid{grid-template-columns:1fr 1fr}.steps,.contact{grid-template-columns:1fr}}
 @media(max-width:480px){.g3,.grid,.row{grid-template-columns:1fr}.chip{font-size:12px}}
+
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(42vmax 42vmax at 88% 6%,var(--b1),transparent 62%),radial-gradient(36vmax 36vmax at 4% 42%,var(--b2),transparent 62%),radial-gradient(42vmax 42vmax at 82% 96%,var(--b3),transparent 62%)}
+.card,.panel,.chip,.tool,.btn:not(.p),.link,.step{background:var(--glass);border:1px solid var(--gb);-webkit-backdrop-filter:blur(18px) saturate(150%);backdrop-filter:blur(18px) saturate(150%);box-shadow:0 8px 28px #0b1f3a14,inset 0 1px 0 #ffffff40}
+.trust{background:color-mix(in srgb,var(--brand) 14%,transparent);-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.card:hover,.link:hover{border-color:var(--brand)}
+input,select,textarea{background:color-mix(in srgb,var(--bg) 55%,transparent)}
 </style>
 </head>
 <body>
